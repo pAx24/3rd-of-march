@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.com/libraries/pdf.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="stylesheet" href="./asset/css/index.css" />
+    <script src="./asset/js/function.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 March</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container dropdown">
+        <a
+          class="navbar-brand fw-bold"
+          target="_blank"
+          href="https://bg.wikipedia.org/wiki/Ден_на_Освобождението_на_България_от_османско_иго"
+          ><img
+            src="/asset/media/Bulgaria.svg"
+            alt=""
+            style="height: 65px; margin: auto"
+        /></a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" aria-current="page">
+                Начало
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="projects.html"
+                style="font-weight: 700; background-color: var(--texthover); border-radius: 0.25cm;">
+                Проекти
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" href="contacts.html">
+                Контакти
+              </a>
+            </li>-->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <h1 class="text-center mt-4">Проекти на учениците на ПГЕЕ Пловдив</h1>
+
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button
+            class="nav-link active"
+            id="nav-home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-home"
+            type="button"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
+            onclick="
+            $('#nav-home').addClass('d-flex');
+            $('#nav-profile').removeClass('d-flex');
+            $('#nav-contact').removeClass('d-flex');
+
+            $('#nav-home').removeClass('d-none');
+            $('#nav-profile').addClass('d-none');
+            $('#nav-contact').addClass('d-none');"
+          >
+            8 клас
+          </button>
+          <button
+            class="nav-link"
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-profile"
+            type="button"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+            onclick="
+            $('#nav-home').removeClass('d-flex');
+            $('#nav-profile').addClass('d-flex');
+            $('#nav-contact').removeClass('d-flex');
+
+            $('#nav-home').addClass('d-none');
+            $('#nav-profile').removeClass('d-none');
+            $('#nav-contact').addClass('d-none');"
+          >
+            9 клас
+          </button>
+          <button
+            class="nav-link"
+            id="nav-contact-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-contact"
+            type="button"
+            role="tab"
+            aria-controls="nav-contact"
+            aria-selected="false"
+            onclick="
+            $('#nav-home').removeClass('d-flex');
+            $('#nav-profile').removeClass('d-flex');
+            $('#nav-contact').addClass('d-flex');
+
+            $('#nav-home').addClass('d-none');
+            $('#nav-profile').addClass('d-none');
+            $('#nav-contact').removeClass('d-none');"
+          >
+            10 клас
+          </button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade d-flex flex-wrap justify-content-around"
+          id="nav-home"
+          role="tabpanel"
+          aria-labelledby="nav-home-tab"
+        >
+          <!-- 8th Grade -->
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">
+                Личности участвали в българското опълчение
+              </h5>
+              <p class="card-text">Изготвил: Борис Иванов 8Д</p>
+              <a
+                onclick="showProj('8th/BorisIvanov8D.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">
+                Извоюваната свобода – героизъм и история на българското опълчение
+              </h5>
+              <p class="card-text">Изготвил: Димитър Михов 8Д</p>
+              <a
+                onclick="showProj('8th/dimitar_mihov_8d.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Знамена на българското опълчение</h5>
+              <p class="card-text">Изготвил: Петър Иванов 8Ж</p>
+              <a
+                onclick="showProj('8th/PetarIvanov_8J.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Въоръжаване и униформи</h5>
+              <p class="card-text">
+                Изготвил: Георги Г., Емилиан Г. и Явор В. 8А
+              </p>
+              <a
+                onclick="showProj('8th/Vieoriezenie_i_uniformi_8а.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Знамена на българското опълчение</h5>
+              <p class="card-text">
+                Изготвил: Ваня Бахарева, Петя Пашова и Теодора Стоянова 8А
+              </p>
+              <a
+                onclick="showProj('8th/Znamena_8a.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Български опълченци</h5>
+              <p class="card-text">
+                Изготвил: Никола Въчков 8Д
+              </p>
+              <a
+                onclick="showProj('8th/bulgarski_opulchenci.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <!-- 8th Grade -->
+        </div>
+        <div
+          class="tab-pane fade d-flex flex-wrap justify-content-around"
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+        >
+          <!-- 9th Grade -->
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Битката при Стара Загора</h5>
+              <p class="card-text">Изготвил: Стефан Попиванов 9Е</p>
+              <a
+                onclick="showProj('9th/stephan_popivanov_9E.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Данаил Николаев</h5>
+              <p class="card-text">Изготвил: Симеон Карталов 9Е</p>
+              <a
+                onclick="showProj('9th/danail_nikolaev.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Шипченска Битка</h5>
+              <p class="card-text">Изготвил: Димитър Беганов 9Е</p>
+              <a
+                onclick="showProj('9th/shipnenska_bitka_2.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Битката при Нова Загора</h5>
+              <p class="card-text">Изготвил: Митко Арнаудов 9Ж</p>
+              <a
+                onclick="showProj('9th/nova_zagora.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Войната при Стара Загора</h5>
+              <p class="card-text">Изготвил: Ивайло Точков 9Е</p>
+              <a
+                onclick="showProj('9th/stara_zagora.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">
+                Въоръжаване и униформи на Българското опълчение
+              </h5>
+              <p class="card-text">Изготвили: Й. Зочинов, Й. Гюлов 9В</p>
+              <a
+                onclick="showProj('9th/vuorajavane_i_uniformi.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Атанас Узунов</h5>
+              <p class="card-text">Изготвил: Ученик от 9В клас</p>
+              <a
+                onclick="showProj('9th/atanas_uzunov_9V_19.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Васил Йонков- Гложенеца</h5>
+              <p class="card-text">Изготвил: Божидар Гогов 9Е</p>
+              <a
+                onclick="showProj('9th/vasil_ionkov.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Шипченската битка</h5>
+              <p class="card-text">Изготвили: Tеодор Шарков и Иван Кечев 9А</p>
+              <a onclick="showProj('9th/shipka_9a.pdf')" class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Битката при Стара Загора</h5>
+              <p class="card-text">Изготвил: Иван Запрянов 9Е</p>
+              <a
+                onclick="showProj('9th/stara_zagora_1.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/video.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">
+                Извоюваната свобода -героизъм и история на българското опълчение
+              </h5>
+              <p class="card-text">
+                Изготвили: Даниела Трайкова, Мария Шопова и Снежана Минчева 9А
+              </p>
+              <a onclick="showProj('9th/bulgarsko_opulchenie_vid.mp4')" class="btn btn-primary">Зареди</a>
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">
+                Извоюваната свобода -героизъм и история на Българското опълчение
+              </h5>
+              <p class="card-text">Изготвил: Светослав Ванчев 9Е</p>
+              <a
+                onclick="showProj('9th/izvouvana_svoboda.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">
+                Извоюваната свобода -героизъм и история на Българското опълчение
+              </h5>
+              <p class="card-text">Изготвил: Даниел Бойчев 9Е</p>
+              <a
+                onclick="showProj('9th/izvoiuvana_svoboda_1.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/image.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">
+                Макет на Шипка
+              </h5>
+              <p class="card-text">Изготвили: Атанас Йотов и Даниел Учкунов 9А</p>
+              <a
+                onclick="showProj('9th/shipka_9a.jpg')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <!-- 9th Grade -->
+        </div>
+        <div
+          class="tab-pane fade d-flex flex-wrap justify-content-around"
+          id="nav-contact"
+          role="tabpanel"
+          aria-labelledby="nav-contact-tab"
+        >
+          <!-- 10th Grade -->
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Въоръжение и облекло на XIX век</h5>
+              <p class="card-text">Изготвил: Калоян Нанков 10Б</p>
+              <a
+                onclick="showProj('10th/kalata10b.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/image.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Знамена на българското опълчение</h5>
+              <p class="card-text">Изготвил: Симеон Велков 10Б</p>
+              <a
+                onclick="showProj('10th/znamena_10b.jpg')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/image.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Картичка 3-ти Март</h5>
+              <p class="card-text">Изготвил: Ерик Дингилов 10Г</p>
+              <a
+                onclick="showProj('10th/kartichka_10g.jpg')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Постер битки за освобождение</h5>
+              <p class="card-text">Изготвил: Ерик Дингилов 10Г</p>
+              <a
+                onclick="showProj('10th/poster_bitki_10g.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/presentation.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Постер герои на българското опълчение</h5>
+              <p class="card-text">Изготвил: Иво Абрашев 10Б</p>
+              <a
+                onclick="showProj('10th/poster_geroi_10b.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/image.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Знамената на българското опълчение</h5>
+              <p class="card-text">Изготвил: Рая Пангарова 10А</p>
+              <a
+                onclick="showProj('10th/raya10a.jpg')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/image.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Книга</h5>
+              <p class="card-text">Изготвил: Веселина Кълчищарова 10В</p>
+              <a
+                onclick="showProj('10th/veselina_kulchishtarova_10V.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/image.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">
+                Ген. Данаил Николаев
+              </h5>
+              <p class="card-text">Изготвил: Михаил Кирилов 10Г</p>
+              <a
+                onclick="showProj('8th/mihail_kirilov_10G.pdf')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+
+          <div class="card m-1 d-inline-block">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <img
+                class="card-img-top m-1"
+                src="./asset/media/image.png"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Брошура за Шипченската битка</h5>
+              <p class="card-text">Изготвил: Мартин Георгиев 10В</p>
+              <a
+                onclick="showProj('9th/brochure.jpg')"
+                class="btn btn-primary"
+                >Зареди</a
+              >
+            </div>
+          </div>
+          <!-- 10th Grade -->
+        </div>
+      </div>
+
+      <div
+        class="modal fade show d-block"
+        tabindex="-1"
+        id="modal"
+        role="dialog"
+        aria-labelledby="ModalProj"
+        aria-hidden="false"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close btn btn-light"
+                onclick="hideModal()"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="modal-body" class="modal-body"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center">
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="section-container row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto">
+              <h6 class="text-uppercase fw-bold mb-4">Информация</h6>
+              <p>
+                  Този сайт е създаден от Момчил Калестров и Георги Веселинов с цел представяне на проекти за 3-ти Март от учениците на ПГЕЕ Пловдив.
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Използвани технологии</h6>
+              <p>
+                <a
+                  href="https://getbootstrap.com/"
+                  target="_blank"
+                  class="text-reset"
+                  >Bootstrap</a
+                >
+              </p>
+              <p>
+                <a
+                  href="https://www.w3schools.com/css/"
+                  target="_blank"
+                  class="text-reset"
+                  >CSS</a
+                >
+              </p>
+              <p>
+                <a href="https://html.com/" target="_blank" class="text-reset"
+                  >HTML</a
+                >
+              </p>
+              <p>
+                <a
+                  href="https://www.javascript.com/"
+                  target="_blank"
+                  class="text-reset"
+                  >JavaScript</a
+                >
+              </p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4 footer-header">
+                Социални мрежи
+              </h6>
+              <p>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  class="text-reset"
+                  >Instagram</a
+                >
+              </p>
+              <p>
+                <a
+                  href="https://github.com/GogoVeselinov"
+                  target="_blank"
+                  class="text-reset"
+                  >Github</a
+                >
+              </p>
+              <p>
+                <a
+                  href="https://www.facebook.com/xxgeoergi/"
+                  target="_blank"
+                  class="text-reset"
+                  >Facebook</a
+                >
+              </p>
+            </div>
+            <!--<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Контакти</h6>
+              <p><i class="fas fa-home me-3"></i> Пловдив, България 4002, БГ</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                gogoveselinov55@gmail.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 359 87 785 4994</p>
+            </div>-->
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script>
+      $("#nav-home").removeClass("d-flex");
+      $("#nav-profile").removeClass("d-flex");
+      $("#nav-contact").addClass("d-flex");
+
+      $("#nav-home").addClass("d-none");
+      $("#nav-profile").addClass("d-none");
+      $("#nav-contact").removeClass("d-none");
+    </script>
+  </body>
+</html>
