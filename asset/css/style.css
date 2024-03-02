@@ -1,0 +1,152 @@
+/* Disable text selection */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+footer p, li {
+  text-shadow: 0px 0px 3px white;
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+body {
+  -ns-overflow-width: none;
+  scrollbar-width: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav.navbar {
+  height: 2cm;
+  z-index: 1;
+  background-color: var(--navbar) !important;
+  box-shadow: 0.5px 0.25px 4px;
+}
+
+div.dropdown-menu {
+  background-color: var(--navbar);
+}
+
+.tab-conten {
+  background-color: white;
+}
+
+.card .btn {
+  width: 100%;
+}
+
+.card-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.card {
+  max-width: calc(100% - 10px);
+  width: 18rem;
+}
+
+.card-img-top {
+  width: 4rem;
+  height: 4rem;
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+}
+
+a.nav-link {
+  font-weight: 600;
+}
+/* Style for container */
+main {
+  min-height: calc(100vh - 10cm);
+}
+@media screen and (min-width: 600px) {
+  main {
+    font-size: 1.25rem;
+  }
+
+  /* Style for footer */
+  footer {
+    bottom: 0;
+    width: 100%; /*what the fuck is this GGG?*/
+    min-height: 5cm;
+
+    background: url(../media/texture.png),
+      linear-gradient(
+        to bottom,
+        white 33.3%,
+        #8adb8a 33.3%,
+        #8adb8a 66.6%,
+        #df8282 66.6%
+      );
+    box-shadow: 2px 1px 10px;
+
+    padding: 0.5cm;
+  }
+
+  div.tab-pane {
+    flex-direction: row; /* Stack items vertically */
+    margin: 0.5cm;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    bottom: 0;
+
+    width: var(100%);
+    height: var(100% - 5cm);
+
+    box-shadow: 2px 1px 10px;
+    background: url(../media/texture.png),
+      linear-gradient(
+        to bottom,
+        white 33.3%,
+        green 33.3%,
+        green 66.6%,
+        red 66.6%
+      );
+
+    padding: 0.5cm;
+    margin-top: 5cm; /* Adjust margin */
+  }
+
+  div.navbar-collapse,
+  container {
+    background-color: var(--navbar);
+  }
+
+  button.navbar-toggler,
+  span {
+    border: none;
+  }
+
+  div.dropdown {
+    background-color: var(--navbar);
+    padding-bottom: 0.25cm;
+  }
+
+  /* Style for dropdown menu */
+  div.dropdown-menu {
+    background-color: var(--navbar);
+  }
+
+  nav.navbar {
+    height: 2cm;
+    z-index: 1;
+
+    background-color: var(--navbar) !important;
+    box-shadow: 0.5px 0.25px 4px;
+  }
+}
